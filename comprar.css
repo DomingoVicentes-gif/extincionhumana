@@ -1,0 +1,119 @@
+body {
+  background-image: url('papel-antiguo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+nav {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover,
+nav ul li a.activo {
+  background-color: #555;
+}
+
+.hero-comprar {
+  margin-top: 3em;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.subtitulo-es,
+.subtitulo-en {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0.3em 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: aparecer-sub 1s ease-out forwards;
+}
+
+.subtitulo-en {
+  font-style: italic;
+  color: #007B5E;
+  animation-delay: 0.3s;
+}
+
+.hero-comprar h1 {
+  font-size: 1.5em;
+  color: #444;
+  margin-top: 0.3em;
+}
+
+.llamada-accion {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #222;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.08);
+  margin-top: 0.5em;
+}
+
+@keyframes aparecer-sub {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tiendas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.plataforma {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.2em;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.plataforma a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #007B5E;
+  font-size: 1.1em;
+}
+
+.plataforma:hover {
+  transform: translateY(-5px);
+  background-color: #f0f0f0;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 2em;
+  font-size: 0.9em;
+}
